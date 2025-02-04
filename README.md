@@ -11,15 +11,17 @@ No cost for members but limited space
 
 Welcome! 
 
-Join Steffi for this gentle introduction to R through the creation of figures. 
+Join Alex for this gentle introduction to R through the creation of figures. 
 Good for those with no R experience and those who want to learn more about using 
 the ggplot2 R package.
 
 This GitHub repository holds all the information relating to our workshop.
 
+This workshop was developed by [Dr. Steffi LaZerte](https://github.com/steffilazerte). Thank you for letting me use, modify, and add to this fantastic resource!
+
 > **Important!**
 >
-> Make sure you're ready for the workshop by following the **Before the workshop** instructions. Please [email me](mailto:sel@steffilazerte.ca) if you run into any problems.
+> Make sure you're ready for the workshop by following the **Before the workshop** instructions. Please [email me](mailto:koitera@brandonu.ca) if you run into any problems.
 >
 > Take care to update both R and RStudio, in particular.
 
@@ -27,11 +29,11 @@ This GitHub repository holds all the information relating to our workshop.
 
 ### Workshop Resources
 - Slides (no answers)
-  - [html](https://steffilazerte.ca/workshop-figures-in-r/) (best)
-  - [pdf](https://steffilazerte.ca/workshop-figures-in-r/figures_in_r_slides_sm.pdf)
+  - [html](https://alexkoiter.ca/workshop-figures-in-r/) (best)
+  - [pdf](https://alexkoiter.ca/workshop-figures-in-r/figures_in_r_slides_sm.pdf)
 - Slides (answers)
-  - [html](https://steffilazerte.ca/workshop-figures-in-r/slides_answers.html) (best)
-  - [pdf](https://steffilazerte.ca/workshop-figures-in-r/figures_in_r_slides_answers_sm.pdf)
+  - [html](https://alexkoiter.ca/workshop-figures-in-r/slides_answers.html) (best)
+  - [pdf](https://alexkoiter.ca/workshop-figures-in-r/figures_in_r_slides_answers_sm.pdf)
 
 
 ### Before the workshop

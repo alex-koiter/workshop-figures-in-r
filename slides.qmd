@@ -4,10 +4,10 @@ params:
   online: "hidden"   # "hidden"/"visible" Show/Hide Online workshop slides 
 format: 
   revealjs:
-    author-steffi: true
+    author-alex: true
     title: Creating Figures as an Intro to R
     subtitle: Using the `ggplot2` package
-    workshop: "38:494 - Limnology: The science of inland waters - 2024"
+    workshop: "38:265 Applied Quantitative Methods in Geography - 2025"
     date: today
     date-format: iso
     title-slide-attributes: 
@@ -72,9 +72,17 @@ knitr::opts_chunk$set(dpi = 150, fig.width = 8, out.width = "90%",
 - For privacy, close your email etc. Or just share your RStudio window
 :::
 
-## Me and my creatures {background-color="black" background-image="figures/creatures.jpg"}
+## Thank you
+- Workshop developed by Dr. Steffi Lazerte
+- R programmer
 
-## My garden {background-color="black" background-image="figures/garden.jpg"}
+::: {layout-ncol=2}
+![](figures/steffi_muskoka.JPG){width="10%"}
+
+![](figures/steffi_logo.png){width="20%"}
+:::
+
+## Me and my creatures {background-color="black" background-image="figures/creatures.jpg"}
 
 ## What about you?
 
@@ -108,7 +116,37 @@ knitr::opts_chunk$set(dpi = 150, fig.width = 8, out.width = "90%",
 > **Feel free to ask questions even if it's not the "official" activity!**
 :::
 
+## About this Lab/Tutorial
+
+### Format
+- I will provide you tools and workflow to get started with making figures in R
+- We’ll have hands-on activities, and demonstrations
+
+### R is hard: But have no fear!
+
+-   [Don't expect to remember everything!]{.fragment .highlight-bold}
+-   Copy/Paste is your friend (never apologize for using it!)
+-   Consider this workshop a resource to return to
+
+
+![](figures/horst_need_a_moment.png){.absolute right=0 bottom=0 width=45% fig-alt="A frustrated little monster sits on the ground with his hat next to him, saying \"I just need a minute.\" Looking on empathetically is the R logo, with the word \"Error\" in many different styles behind it."}
+
+
+
 # What is R?
+
+## RStudio vs. R
+
+::: {layout="[[-2, 5, -2, 5, -2]]" layout-valign="center"}
+![RStudio](figures/logo_rstudio.png){width="80%" fig-alt="RStudio blue ball logo"}
+
+![R](figures/logo_r.png){fig-alt="R logo, blue R with grey circle around the back"}
+::: 
+
+-   **RStudio** is not **R**
+-   RStudio is a User Interface or IDE (integrated development environment)
+    -   (i.e., Makes coding simpler)
+
 
 ## R is a Programming language
 
@@ -143,7 +181,7 @@ mean(c(1, 2, 3, 4))
 
 ```{r}
 #| code-line-numbers: false
-steffis_mean <- mean(c(1, 2, 3, 4))
+alex_mean <- mean(c(1, 2, 3, 4))
 ```
 :::
 
@@ -152,7 +190,7 @@ steffis_mean <- mean(c(1, 2, 3, 4))
 
 ```{r}
 #| code-line-numbers: false
-steffis_mean * 6
+alex_mean * 6
 ```
 :::
 
@@ -170,6 +208,76 @@ steffis_mean * 6
 
 [(I made these slides with a mix of R and Quarto)]{.footnote}
 
+:::
+
+
+## Definitions
+
+### Reproducibility
+
+-   Given the same data set the analyses can be reproduced
+
+### Replicability
+
+-   A separate investigator conducted an independent study and came to the same conclusion as the original study
+
+## Reproducibility
+
+-   Less about ensuring the correctness of the results
+-   More about being transparent and understanding exactly what was done
+    -   This is especially important in large and complex data sets
+
+::: columns
+::: {.column width="50%"}
+::: callout-important
+A study can be reproducible and still be wrong
+:::
+:::
+
+::: {.column width="50%"}
+![[Allison Horst](https://allisonhorst.com/)](figures/repro.jpeg)
+:::
+:::
+
+
+## Working with large data sets
+
+### Data munging/wrangling
+
+::: columns
+::: {.column width="30%"}
+1.  Formatting
+2.  Merging
+3.  Quality assurance
+    -   NA's
+    -   0's
+    -   Detection limits
+    -   Outliers
+    -   Typos/errors
+:::
+
+::: {.column width="70%"}
+![[Allison Horst](https://allisonhorst.com/)](figures/unruly_data.jpg)
+:::
+:::
+
+### Need to document every change you make
+
+## Data analysis
+
+### Analysis/figures
+
+-   Data used
+-   Analysis used (trial and error)
+-   Parameters
+-   Diagnostics
+-   Figure creation process
+-   Software versions
+
+### Hard to write papers if you don't <br/>keep track of this!
+
+::: {.absolute top="50" right="0" width="65%"}
+![[Allison Horst](https://allisonhorst.com/)](figures/kmeans_1.jpg)
 :::
 
 ## R is also beautiful
@@ -255,6 +363,49 @@ mean(c(1, 2, 3, 4))
 -   **RStudio** is not **R**
 -   RStudio is a User Interface or IDE (integrated development environment)
     -   (i.e., Makes coding simpler)
+    
+## RStudio Features
+
+### Projects
+- Handles working directories
+- Organizes your work
+
+:::{.fragment}
+[Let's setup a project in RStudio!]{.note .absolute top=45% left=75%}
+:::
+
+
+:::{.fragment}
+### Changing Options: Tools > Global Options
+
+- General > Restore RData into workspace at startup (NO!)
+- General > Save workspace to on exit (NEVER!)
+- Code > Insert matching parens/quotes (Personal preference)
+:::
+
+:::{.fragment}
+[Let's change some options in RStudio!]{.note .absolute top=45% left=75%}
+:::
+
+:::{.fragment}
+### Packages
+- Can use the package manager to install packages
+- Can use the manager to load them as well, but not recommended
+:::
+
+
+
+# Getting Ready
+
+:::{style="text-align:left; padding: 15px 200px 15px 200px"}
+{{< fa folder-open >}} Open New File <br>
+[(make sure you're in the RStudio Project)]{.small .hang}
+
+{{< fa pen >}} Write `library(tidyverse)` at the top
+
+{{< fa floppy-disk >}} Save this new script <br>
+[(consider names like `intro.R` or `1_getting_started.R`)]{.small .hang}
+:::    
 
 ## `functions()` - Do things, Return things
 
@@ -1360,12 +1511,12 @@ unlink(here("penguins_mass.png"))
 :::{.columns}
 
 :::{.column width="50%"}
-![](figures/steffi_logo.png){width="60%"}
+
 :::
 
 :::{.column width="50%"}
-[{{< fa globe >}} [steffilazerte.ca](https://steffilazerte.ca)]{.small}  
-[{{< fa envelope >}} <sel@steffilazerte.ca>]{.small}   
+[{{< fa globe >}} [alexkoiter.ca](https://alexkoiter.ca)]{.small}  
+[{{< fa envelope >}} <koitera@brandonu.ca>]{.small}   
 [Slides created with Quarto on `r Sys.Date()`]{.small}
 :::
 
