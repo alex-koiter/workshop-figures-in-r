@@ -31,10 +31,12 @@ This workshop was developed by [Dr. Steffi LaZerte](https://github.com/steffilaz
 - Slides (no answers)
   - [html](https://alexkoiter.ca/workshop-figures-in-r/) (best)
   - [pdf](https://alexkoiter.ca/workshop-figures-in-r/figures_in_r_slides_sm.pdf)
+  
+<!--
 - Slides (answers)
   - [html](https://alexkoiter.ca/workshop-figures-in-r/slides_answers.html) (best)
   - [pdf](https://alexkoiter.ca/workshop-figures-in-r/figures_in_r_slides_answers_sm.pdf)
-
+-->
 
 ### Before the workshop
 - [Install R](https://muug.ca/mirror/cran/) 
