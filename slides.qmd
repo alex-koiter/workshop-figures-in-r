@@ -82,7 +82,6 @@ knitr::opts_chunk$set(dpi = 150, fig.width = 8, out.width = "90%",
 ![](figures/steffi_logo.png){width="20%"}
 :::
 
-## Me and my creatures {background-color="black" background-image="figures/creatures.jpg"}
 
 ## What about you?
 
@@ -239,46 +238,6 @@ A study can be reproducible and still be wrong
 :::
 :::
 
-
-## Working with large data sets
-
-### Data munging/wrangling
-
-::: columns
-::: {.column width="30%"}
-1.  Formatting
-2.  Merging
-3.  Quality assurance
-    -   NA's
-    -   0's
-    -   Detection limits
-    -   Outliers
-    -   Typos/errors
-:::
-
-::: {.column width="70%"}
-![[Allison Horst](https://allisonhorst.com/)](figures/unruly_data.jpg)
-:::
-:::
-
-### Need to document every change you make
-
-## Data analysis
-
-### Analysis/figures
-
--   Data used
--   Analysis used (trial and error)
--   Parameters
--   Diagnostics
--   Figure creation process
--   Software versions
-
-### Hard to write papers if you don't <br/>keep track of this!
-
-::: {.absolute top="50" right="0" width="65%"}
-![[Allison Horst](https://allisonhorst.com/)](figures/kmeans_1.jpg)
-:::
 
 ## R is also beautiful
 

@@ -6,12 +6,12 @@
 <script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="slides_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.39">
+  <meta name="generator" content="quarto-1.6.40">
 
-  <meta name="dcterms.date" content="2025-02-04">
+  <meta name="dcterms.date" content="2025-11-19">
   <title>Creating Figures as an Intro to R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -210,7 +210,7 @@
     
     
     
-    <p class="date">Compiled: 2025-02-04</p>
+    <p class="date">Compiled: 2025-11-19</p>
   </section>
 <section>
 <section id="preamble" class="title-slide slide level1 center">
@@ -237,9 +237,6 @@
 </div>
 </div>
 </div>
-</section>
-<section id="me-and-my-creatures" class="slide level2" data-background-color="black" data-background-image="figures/creatures.jpg">
-<h2>Me and my creatures</h2>
 </section>
 <section id="what-about-you" class="slide level2">
 <h2>What about you?</h2>
@@ -441,54 +438,6 @@
 </figure>
 </div>
 </div></div>
-</section>
-<section id="working-with-large-data-sets" class="slide level2">
-<h2>Working with large data sets</h2>
-<h3 id="data-mungingwrangling">Data munging/wrangling</h3>
-<div class="columns">
-<div class="column" style="width:30%;">
-<ol type="1">
-<li>Formatting</li>
-<li>Merging</li>
-<li>Quality assurance
-<ul>
-<li>NA’s</li>
-<li>0’s</li>
-<li>Detection limits</li>
-<li>Outliers</li>
-<li>Typos/errors</li>
-</ul></li>
-</ol>
-</div><div class="column" style="width:70%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figures/unruly_data.jpg"></p>
-<figcaption><a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
-</figure>
-</div>
-</div></div>
-<h3 id="need-to-document-every-change-you-make">Need to document every change you make</h3>
-</section>
-<section id="data-analysis" class="slide level2">
-<h2>Data analysis</h2>
-<h3 id="analysisfigures">Analysis/figures</h3>
-<ul>
-<li>Data used</li>
-<li>Analysis used (trial and error)</li>
-<li>Parameters</li>
-<li>Diagnostics</li>
-<li>Figure creation process</li>
-<li>Software versions</li>
-</ul>
-<h3 id="hard-to-write-papers-if-you-dont-keep-track-of-this">Hard to write papers if you don’t <br>keep track of this!</h3>
-<div class="absolute" style="top: 50px; right: 0px; width: 65%; ">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figures/kmeans_1.jpg"></p>
-<figcaption><a href="https://allisonhorst.com/">Allison Horst</a></figcaption>
-</figure>
-</div>
-</div>
 </section>
 <section id="r-is-also-beautiful" class="slide level2">
 <h2>R is also beautiful</h2>
@@ -1821,7 +1770,7 @@
 </div><div class="column" style="width:50%;">
 <p><span class="small"><i class="fa-solid fa-globe" aria-label="globe"></i> <a href="https://alexkoiter.ca">alexkoiter.ca</a></span><br>
 <span class="small"><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:koitera@brandonu.ca" class="email">koitera@brandonu.ca</a></span><br>
-<span class="small">Slides created with Quarto on 2025-02-04</span></p>
+<span class="small">Slides created with Quarto on 2025-11-19</span></p>
 </div></div>
 </div>
 </section></section>
@@ -2060,42 +2009,80 @@
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
