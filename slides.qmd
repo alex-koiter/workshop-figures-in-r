@@ -7,7 +7,7 @@ format:
     author-alex: true
     title: Creating Figures as an Intro to R
     subtitle: Using the `ggplot2` package
-    workshop: "38:265 Applied Quantitative Methods in Geography - 2025"
+    workshop: "38:265 Applied Quantitative Methods in Geography - 2026"
     date: today
     date-format: iso
     title-slide-attributes: 
@@ -311,17 +311,6 @@ mean(c(1, 2, 3, 4))
 :::
 :::
 
-## RStudio vs. R
-
-:::{layout="[[-2, 5, -2, 7, -2]]" layout-valign="center"}
-![RStudio](figures/RStudio-Ball.png)
-
-![R](figures/R.png)
-:::
-
--   **RStudio** is not **R**
--   RStudio is a User Interface or IDE (integrated development environment)
-    -   (i.e., Makes coding simpler)
     
 ## RStudio Features
 
